@@ -23,9 +23,21 @@ function checkWalls(){
     }
 }
 
+// Exercise 3
+function checkWin(){
+    var win = document.getElementById("end");
+    win.onmouseover = function() {
+        if (!gameLost) {
+            var status = document.getElementById("status");
+            status.textContent = "Ding Ding Ding! Winner!!";
+        }
+    };
+}
+
+
 
 window.onload = function() {
     instruct = document.getElementById("status").textContent;
     checkWalls();
-    
+    checkWin();    
 }
