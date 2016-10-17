@@ -114,7 +114,3 @@ neighboring elements.  Necessary to avoid giving ids to the boundary divs
 	width: 98px;
 }
 
-/*Take this out*/
-#boundary1 {
-	background-color: green;
-}
