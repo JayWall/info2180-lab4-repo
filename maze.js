@@ -34,6 +34,7 @@ function checkWin(){
     };
 }
 
+
 // Exercise 4 5
 function resetIt(){
     // Start game and blocks cheaters
@@ -54,11 +55,29 @@ function resetIt(){
     };
 }
 
-
+// Cheating
+function nonCheating(){
+    document.getElementsByTagName("BODY")[0].onmousemove = function(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+        
+        var top = document.getElementById("maze").offsetTop;
+        var height = document.getElementById("maze").offsetHeight;
+        var left = document.getElementById("maze").offsetLeft;
+        var width = document.getElementById("maze").offsetWidth;
+        
+        if (start && x < left || y < top || y > (top + height) ) {
+            turnRed();
+        }
+        
+    };
+    
+}
 
 window.onload = function() {
     instruct = document.getElementById("status").textContent;
     checkWalls();
     checkWin();
-    resetIt();    
+    resetIt();  
+    nonCheating();  
 }
