@@ -23,7 +23,7 @@ function checkWalls(){
     }
 }
 
-// Exercise 3
+// Exercise Three
 function checkWin(){
     var win = document.getElementById("end");
     win.onmouseover = function() {
