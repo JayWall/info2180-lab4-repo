@@ -34,10 +34,31 @@ function checkWin(){
     };
 }
 
+// Exercise 4 5
+function resetIt(){
+    // Start game and blocks cheaters
+    var sbox = document.getElementById("start");
+    
+    sbox.onmouseover = function () {
+        start = true;
+    };
+    
+    startBox.onclick = function() {
+        var walls =  document.querySelectorAll(".youlose");
+        for (var i=0; i < walls.length; i++) {
+            walls[i].setAttribute("class", "boundary");
+        }
+
+        gameLost = false;
+        document.getElementById("status").textContent = instruct;
+    };
+}
+
 
 
 window.onload = function() {
     instruct = document.getElementById("status").textContent;
     checkWalls();
-    checkWin();    
+    checkWin();
+    resetIt();    
 }
