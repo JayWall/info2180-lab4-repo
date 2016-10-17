@@ -2,6 +2,7 @@ var gameLost = false;
 var start = false;
 var instruct = "";
 
+// Exercise 1
 function turnRed() {
     var walls = document.getElementsByClassName("boundary");
     for (var i=0; i < walls.length; i++) {
